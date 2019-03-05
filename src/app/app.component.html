@@ -1,5 +1,8 @@
 <input [(ngModel)]="name" type="text">
-<p>
+<p [ngClass]="{'color-to-input': name.length > 3}" *ngIf="name; else giveName">
     {{name}}
 </p>
-<button (click)="greeter()">Greeter</button>
+<ng-template #giveName>
+    Please give your name!
+</ng-template> <br>
+<button [disabled]="!name" (click)="greeter()">Greeter</button>
