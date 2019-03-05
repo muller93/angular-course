@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'angular-course';
 
   public name: string;
+
+  public greeter() {
+    alert('Hello ' + this.name);
+  }
 }
