@@ -1,4 +1,4 @@
-
-<div *ngFor="let element of task;">
-  {{element}}
+<div *ngFor="let element of task; let odd = odd; let first = first"
+   [ngClass]="{ bold: odd, first: first}">
+   {{element}}
 </div>

@@ -9,7 +9,7 @@ export class TaskListComponent implements OnInit {
 
   constructor() { }
 
-  public task: string[] = ['Egy', 'Kettő', 'Három'];
+  public task: string[] = ['Egy', 'Kettő', 'Három', '4', '5'];
 
   ngOnInit() {
   }
