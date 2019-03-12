@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITaskInterface } from 'src/app/shared/interfaces/task.interface';
 
 @Component({
   selector: 'app-task-list',
@@ -6,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent implements OnInit {
-
+  public task: string[] = ['Egy', 'Kettő', 'Három', '4', '5'];
+  public newTask: ITaskInterface;
   constructor() { }
 
-  public task: string[] = ['Egy', 'Kettő', 'Három', '4', '5'];
 
   ngOnInit() {
+  }
+
+  public addValue() {
+    this.newTask.name = 'Első feladat';
   }
 
 }
